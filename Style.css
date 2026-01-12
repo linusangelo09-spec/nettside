@@ -1,0 +1,687 @@
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* * {
+  outline: 3px solid red; 
+} */
+
+/* outline for alt*/
+
+/*------------------------hentet fra google---------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+       
+body {
+    height: 100vh; /* Ensures the body takes full viewport height */
+    margin: 0; /* Removes default body margin */
+    background-image: radial-gradient(circle, #0A031A,#11052F ); /* Red to Blue radial gradient */
+
+}
+
+:root {
+  --nav-active-bg: hsl(272deg 68% 48%);
+  --nav-hover-bg: color-mix(in srgb, var(--nav-active-bg) 75%, transparent 25%);
+  --nav-active-color: #ffffff;
+}
+
+
+
+/*------------------------------------------------------------------------*/
+
+
+
+/* dette gjorde jeg når jegt hadde unordered list
+.text {
+    border-radius: 13px;
+    color: white;
+    text-align: center;
+    background-color: #606dff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around; 
+} */
+
+
+/* ===== Noe av dette ble tatt fra Chatgpt. men mye gjort selv.==== */
+header {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2vh;
+    background-color: #606dff;
+    align-items: center;
+    height: 7.263922518159807vh;
+    width: 95%;
+    background-image: radial-gradient(circle, #9762c9 -20%, #4b3083 30%);
+    border: 0.24213075060532688vh solid rgb(253, 182, 255); 
+    position: relative;
+    left: 5vh;
+    box-shadow: 0 0 2vh rgba(255, 255, 255, 0.349); 
+}
+
+nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 75%;
+  max-width: 120vh;
+  justify-content: space-evenly;
+  gap: 0;
+  padding: 0 2vh;
+}
+
+.logo {
+    height: 6vh;
+    position: relative;
+    margin-left: vh;
+  margin-top: 0.vh; 
+}
+
+a[aria-label="Home"] .logo,
+.logo {
+  transition: transform 180ms ease;
+  transform-origin: center center;
+  cursor: pointer;
+}
+
+a[aria-label="Home"]:hover .logo,
+a[aria-label="Home"]:focus .logo,
+.logo:hover,
+.logo:focus {
+  transform: translateY(-4%) scale(1.06);
+}
+
+
+a[aria-label="Home"] {
+  display: inline-flex;
+  align-items: center;
+  height: 100%; 
+  padding: 0 0.8vh; 
+  border-radius: 1.2vh; 
+  transition: background-color 180ms ease, box-shadow 180ms ease;
+}
+
+a[aria-label="Home"]:hover,
+a[aria-label="Home"]:focus {
+  background-color: var(--nav-hover-bg);
+  box-shadow: 0 0 1.2vh rgba(0,0,0,0.18);
+}
+.navtext {
+  margin: 0 1.5vh;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  height: 100%; 
+  padding: 0 2.5vh; 
+  box-sizing: border-box;
+  white-space: nowrap; 
+  min-width: 6ch;
+}
+
+
+a.navtext.active,
+nav a[aria-current="page"] {
+  background-color: var(--nav-active-bg); 
+  color: var(--nav-active-color);
+  box-shadow: 0 0 1vh rgba(255,255,255,0.08);
+
+  transform: none;
+}
+
+
+nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 95%;
+  max-width: 120vh;
+  justify-content: space-evenly;
+  gap: 0;
+  padding: 0 2vh;
+}
+
+nav a:hover {
+  background-color: var(--nav-hover-bg);
+  transform: none; 
+}
+
+/* ============================= */
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(97, 89, 173, 0);
+    border-radius: 1vh;
+    text-align: center;
+    font-size: 4vh;
+}
+
+
+/* ============================= */
+/* CLICKABLE PROFILE CIRCLE UX  */
+/* -----taken from chatgpt------ */
+/* ============================= */
+
+.circle {
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+
+.circle:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+    box-shadow: 0 0 4vh rgba(120, 170, 255, 0.75);
+}
+
+
+.circle::after {
+    content: "";
+    position: absolute;
+    inset: -1.5vh;
+    border-radius: 50%;
+    border: 0.25vh solid rgba(160, 120, 255, 0.6);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.circle:hover::after {
+    opacity: 1;
+}
+
+
+.circle-text {
+    color: white;
+    font-size: 3vh;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.circle:hover .circle-text {
+    opacity: 1;
+}
+
+
+a:focus .circle {
+    box-shadow: 0 0 4vh rgba(120, 170, 255, 0.9);
+}
+
+/* ============================= */
+
+
+.circlereal {
+    width: 42.3728813559322vh;
+    height: 42.3728813559322vh;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: relative;
+    top: -15%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 5vh rgba(0, 0, 0, 0.521);
+}
+
+.aboutme {
+    position: absolute;
+    top: 35%;           
+    left: 7%;          
+    width: 50%;         
+    padding: 3vh;       
+    background-color: rgba(0, 0, 0, 0.4); 
+    border-radius: 2vh; 
+    color: white;       
+    z-index: 2;         
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.5); 
+}
+
+header nav a {
+    margin: 0 2vh;
+}
+
+a {
+    margin: 0;
+}
+
+.circle {
+    display: block;
+    width: 42.3728813559322vh;
+    height: 42.3728813559322vh;
+    border-radius: 50%;
+    background-color: #3498db;
+    overflow: hidden;         
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.big-box {
+    width: 90%;
+    height: 54.479418886198545vh;
+    background-image: radial-gradient(circle, #773baf -20%, #200c49 60%);
+    border-radius: 3.0651340996168583vh;
+    margin:  auto; 
+    position: relative; 
+    top: 12.5vh;
+}
+
+
+.big-boxradial {
+    width: 90%;
+    height: 54.479418886198545vh;
+    background-image: radial-gradient(circle at 75% 50%, #773baf -20%, #200c49 60%);
+    border-radius: 3.0651340996168583vh;
+    margin:  auto; 
+    position: relative; 
+    top: 12.5vh;
+    box-shadow: 0 0 1vh rgba(32, 3, 99, 0.5); 
+}
+
+.circle-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.linus {
+    color: red;
+    position: absolute;
+    bottom: 134.09961685823754vh;
+    left: 9.578544061302683vh;
+    font-size: 7.662835249042145vh;
+    display: flex;
+    justify-content: center;
+    width: 100vh;
+}
+
+
+.appstext {
+    font-size: 4.4213075060532687vh;
+    color: white;
+    margin-top: 1.1494252873563218vh;
+    text-align: center;
+    margin-left: 1.5vh;
+}
+
+
+.apptextunder {
+    font-size: 1.1494252873563218vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    }
+
+.app {
+    height: 10vh;
+    width: 10vh;
+}
+
+.programs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5325670498084292vh;
+    justify-content: center;
+    
+}
+
+.picture-editing,
+.video-editing,
+.html_css {
+    height: 10vh;
+    border: 0.22988505747126436vh solid white;   
+    padding: 0.7662835249042146vh;                
+    border-radius: 1.1494252873563218vh;          
+}
+
+
+
+
+.group-link {
+    display: block;        
+    text-decoration: none; 
+    color: inherit;
+    display: block;
+    margin: 0; 
+
+}
+
+.navtext {
+  margin: 0;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 4vh;
+  box-sizing: border-box;
+  white-space: nowrap;
+  flex: none;
+}
+/* layout for the small headings under the apps section */
+.apptextunder {
+  width: 57.47126436781609vh;
+  font-size: 0.9195402298850575vh;
+  margin-left: 32vw;
+}
+
+.PE {
+  margin-left: -3.45vw;
+}
+
+.HC {
+  margin-right: -8.45vw;
+}
+
+.film {
+    width: 67vw;
+    height: 70vh;
+    display: flex;
+    justify-self: center;
+    margin-bottom: 35vh;
+    border: 0.22988505747126436vh solid purple;
+    border-radius: 1.5325670498084292vh;
+}
+
+.vom {
+    color: #9999ff;
+    display: flex;
+    justify-self: center;
+    font-size: 6vh;    
+}
+
+
+
+footer {
+    height: 60vh;
+    margin-top: 38.31417624521073vh;
+    padding-left: 11.494252873563218vh;
+    background-color: #030116;
+}
+
+.foottekst {
+    padding-top: 10vh;
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footwrap {
+    display: flex;
+    flex-direction: row;
+    filter: invert(1);
+    justify-content: space-between;
+    width: 19.157088122605366vh;
+    margin-top: 3vh;
+}
+
+
+.footapp {
+    height: 3.8314176245210727vh;
+}
+
+
+
+.big-boxy {
+    width: 90%;
+    height: 75vh;
+    background-color: #30126b; 
+    border-radius: 3.0651340996168583vh;
+    margin:  auto; 
+    position: relative; 
+    top: 5vh;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.5); 
+}
+
+
+
+.big-boxytext {
+    padding-left: 85vh;
+    padding-top: 0.5vh;
+    color: white;
+    z-index: 2;
+}
+
+
+.ift {
+    filter: invert(1);
+    height: 6vh;
+    display: flex;
+    justify-self: center;
+    flex-direction: row;
+}
+
+.bbd {
+    margin-top: 20vh;
+    padding-left: 87vh;
+    width: 27vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contact-form {
+  max-width: 22vw;
+  height: 50vh;
+  margin: 1.5325670498084292vh auto;
+  padding: 1.5325670498084292vh;
+  border:  0.07662835249042145vh solid #ccc;
+  border-radius: 0.6053268765133172vh;
+  background-color: #8861e4;
+  display: flex;
+  flex-direction: column;
+  margin-left:  117vh;
+  margin-top: -59.5vh;
+}
+
+.contact-form div {
+  margin-bottom: 1.1494252873563218vh;
+}
+
+.contact-form label {
+  display: block; 
+  margin-bottom: 0.3831417624521073vh;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; 
+
+  padding: 0.7662835249042146vh;
+  border: 0.07662835249042145vh solid #ccc;
+  border-radius: 0.3065134099616858vh;
+  box-sizing: border-box; 
+}
+
+.contact-form textarea {
+  resize: vertical; 
+}
+
+.contact-form button {
+  margin-top: 1vh;
+  background-color: #373347; 
+  color: white;
+  padding: 1.8159806295399517vh 1.8159806295399517vh;
+  border: none;
+  border-radius: 0.48426150121065376vh;
+  cursor: pointer;
+  font-size: 1.937046004842615vh;
+}
+
+.contact-form button:hover {
+  background-color: #080c13;
+}
+
+.kontakt {
+  margin-top: 6vh;
+}
+
+#message {
+    height: 20vh;
+}
+
+
+.bais {
+    color: white;
+    display: flex;
+    justify-content: end;
+    padding-right: 5vh;
+}
+
+.get {
+    padding-left: 20vh;
+    width: 30vh;
+}
+
+.hard {
+    font-size: 1.5vh;
+}
+
+
+.picture {
+    position: relative;
+    height: 70vh;
+    border: solid #9f17b08d;
+    border-radius: 4vh;
+    margin-top: -67.8vh;
+    margin-left: 8vh;
+    z-index: 1;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.726); 
+}
+
+
+.big-boxy {
+  position: relative;
+  background-color: #eee; 
+  background-image: linear-gradient(to right, #773baf -20%, #200c49 70%);
+}
+
+
+.smaller-boxy {
+    width: 82.32445520581113vh; 
+    height: 70.2179176755448vh;
+    background-color: #ffffff; 
+    position: absolute;   
+    background-color: rgba(17, 16, 16, 0.4);
+    top: 2.4213075060532687vh;            
+    left: 81.71912832929782vh;
+    border-radius: 4.842615012106537vh;
+    z-index: 0;
+    box-shadow: 0 0 2vh rgba(240, 240, 240, 0.288); 
+}
+
+
+
+.get, .hard, .big-boxytext, .bais, .contact-form, .bbd, p {
+    position: relative;
+    z-index: 2;
+}
+
+.desmanual{
+  margin-left: 4vh;
+  margin-top: 30vh;
+  width: 58vw;
+  height: 65vh;
+  border-radius: 4vh;    
+  overflow: hidden;       
+  box-shadow: 0 0.7263922518159807vh 2.179176755447942vh rgba(0,0,0,0.15);
+  border: 0.12106537530266344vh solid rgba(0,0,0,0.08);
+}
+
+/* make iframe fill the container and remove default borders */
+.desmanual iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.Des-text {
+  color: white;
+  margin-left: 62vw;
+  margin-top: -57vh;
+}
+
+
+
+.figma  {
+  height: 70vh;
+  width: 50vw;
+  margin-top: 30vh; 
+  margin-left: 43vw;
+  border-radius: 4vh;
+  box-shadow: 0 0 4vh rgba(216, 214, 214, 0.527); 
+}
+
+
+.RS {
+  border-radius: 5vh;
+  background-color: rgba(179, 117, 207, 0.158);
+  margin-top: 30vh;
+  margin-left: 5vh;
+  height: 60vh;
+  box-shadow: 0 0 4vh rgba(255, 255, 255, 0.356); 
+
+}
+.RS_text {
+  color: white;
+  position: relative;
+  margin-left: 50vw;
+  margin-top: -47vh;
+}
+
+.text-RS {
+  font-size: 2.5vh;
+}
+
+
+
+.prototype-section {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  margin-top: 15vh;
+}
+
+
+.figma-wrap {
+  width: 50vw;
+  height: 70vh;
+  margin-left: 4vw;
+}
+
+.figma {
+  width: 100%;
+  height: 100%;
+  border-radius: 4vh;
+  display: block;
+}
+
+.prototype-app {
+  color: white;
+  width: 40vw;
+  margin-left: 3vw;
+  margin-top: -55vh;
+}
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="Style.css">
+</head>
+
+
+
+<body>
+
+<header>
+    <a href="Index.html" aria-label="Home"><img class="logo" src="bilder/LA.logo - Square.silver.svg" alt="logo"></a>
+    <nav>
+    <a class="navtext" href="realfrontpage.html">About me</a>
+        <a class="navtext" href="work.html">Work</a>
+        <a class="navtext" href="contact.html">Contact me</a>
+    </nav>
+</header>
+
+
+
+<div class="big-boxradial">
+
+</div>
+    <img src="bilder/portrett_port.jpg" alt="Picture of me" class="circlereal">
+    <div class="aboutme">
+    <h1>A little info about me</h1>
+    <p>Hi! my name is Linus. im currently a student at kuben Vgs, and studying Information Technology and Media Production.</p>
+    <p>In my spare time i like to play handball, play the piano, play video games, edit short form videos, and play video games. (a lot of pokemon)</p>
+    <p>I live in Oslo Norway, i have 3 siblings, and my parents are split up.</p>
+</div>
+<div>
+
+
+
+
+
+
+
+
+    <h1 class="vom" >Video about me</h1>
+    <video controls class="film" src="videoer/Film_om_meg2.mp4"> </video>
+</div>
+
+
+
+<h1 class="appstext">Programs im familiar with</h1>
+
+<div class="programs">  
+
+    <div class="picture-editing">
+        <img class="app" src="bilder/photoshop-icon.png">
+        <img class="app" src="bilder/illustrator.png">
+    </div>
+<a href="https://www.tiktok.com/search?q=sosuke__editz&t=1760693357558" target="_blank" class="group-link">
+    <div class="video-editing">
+        <img class="app" src="bilder/premiere-icon.png">
+        <img class="app" src="bilder/AE.png">
+        <img class="app" src="bilder/AM-icon.png">
+        <img class="app" src="bilder/blurrr-icon.png">
+    </div>
+</a>
+
+
+
+
+    <div class="html_css">
+        <img class="app" src="bilder/vscode-icon.png">
+    </div>
+
+</div>
+
+<div class="apptextunder">
+<h1 class="PE" >Picture editing</h1>
+<h1 class="VE" >Video editing</h1>
+<h1 class="HC" >Html/css</h1>
+</div>
+
+
+
+<footer>
+    <div class="foottekst">
+    <h1>Contact</h1>
+    <p>lore</p>
+    <h2>linus.angelo09@gmail.com</h2>
+    <h3>+47 (Norway) 483 82 164</h3>
+    </div>
+    <div class="footwrap">
+    <img class="footapp" src="bilder/Instagram logo.png" alt="">
+    <img class="footapp" src="bilder/facebook logo.png" alt="">
+    <img class="footapp" src="bilder/TIktok logo.png" alt="">
+    </div>
+    <p class="bais" >&copy; Linus angelo, currently looking for hire.</p>
+</footer>
+
+<!-- <script>
+window.onload = () => {
+    const oldPos = JSON.parse(sessionStorage.getItem('circlePos'));
+    const newCircle = document.querySelector('.circlereal');
+
+    if (oldPos && newCircle) {
+        const newRect = newCircle.getBoundingClientRect();
+
+        const dx = oldPos.left - newRect.left;
+        const dy = oldPos.top - newRect.top;
+        const scaleX = oldPos.width / newRect.width;
+        const scaleY = oldPos.height / newCircle.offsetHeight;
+
+        // Start from old position
+        newCircle.style.transform = `translate(${dx}px, ${dy}px) scale(${scaleX}, ${scaleY})`;
+
+        // Force browser to recognize the starting transform
+        newCircle.getBoundingClientRect();
+
+        // Animate to final position
+        newCircle.style.transition = 'transform 0.7s ease';
+        newCircle.style.transform = 'translate(0, 0) scale(1, 1)';
+
+        sessionStorage.removeItem('circlePos');
+    }
+};
+</script> -->
+</body>
+
+<script src="nav-active.js"></script>
+
+</body>
+</html>
