@@ -181,12 +181,28 @@ a {
     align-items: center;
     justify-content: center;
     position: absolute;
+    animation: heartbeat 2s infinite;
 }
 
 
 .circle:hover {
     transform: translate(-50%, -50%) scale(1.08);
     box-shadow: 0 0 4vh rgba(120, 170, 255, 0.75);
+}
+
+@keyframes heartbeat {
+    0%, 20%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    10% {
+        transform: translate(-50%, -50%) scale(1.08);
+    }
+    14% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+    18% {
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 
 
@@ -223,6 +239,13 @@ a:focus .circle {
     box-shadow: 0 0 4vh rgba(120, 170, 255, 0.9);
 }
 
+.circle-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+}
+
 /* ============================= */
 
 
@@ -235,7 +258,10 @@ a:focus .circle {
     top: -15%;
     left: 75%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 5vh rgba(0, 0, 0, 0.521);
+    box-shadow: 0 0 5vh rgba(150, 19, 210, 0.9), 0 0 0 0.5vh rgba(132, 0, 255, 0.25);
+    object-fit: cover;
+    object-position: center 15%;
+    border: none;
 }
 
 .aboutme {
@@ -685,3 +711,112 @@ footer {
 }
 
 
+.gata {
+  height: 50vh;
+  width: 80vw;
+  padding-left: 10vw;
+}
+
+/* Video styling - alternating left/right layout */
+.video-wrap {
+  border-radius: 4vh;
+  box-shadow: 0 0 4vh rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  margin-top: 30vh;
+}
+
+.video-wrap.video-left {
+  margin-left: 4vh;
+  width: 50vw;
+  height: 60vh;
+}
+
+.video-wrap.video-right {
+  margin-left: 43vw;
+  width: 50vw;
+  height: 60vh;
+}
+.fredag-video {
+  margin-top: 20vh;
+}
+.sad-video {
+  margin-top: 40vh;
+}
+.restaurant-image,
+.video-wrap.video-left.restaurant-image {
+  margin-top: 25vh;
+  height: auto;
+  transition: transform 0.25s ease;
+}
+.restaurant-image:hover {
+  transform: scale(1.02);
+}
+.restaurant-image .video-item {
+  width: 100%;
+  height: auto !important;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.basket-video {
+  margin-top: 30vh;
+}
+
+.video-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 4vh;
+  display: block;
+}
+
+.video-text {
+  color: white;
+  margin-top: -50vh;
+  margin-bottom: 20vh;
+  width: 36vw;
+  line-height: 1.8;
+  word-break: break-word;
+  min-height: 25vh;
+}
+
+.video-text.video-text-right {
+  margin-left: 55vw;
+}
+
+.video-text.video-text-left {
+  margin-left: 4vh;
+}
+
+.norway-text {
+  margin-top: -63vh;
+  margin-bottom: 10vh;
+}
+.street-text {
+  margin-top: -60vh;
+  margin-bottom: 10vh;
+}
+
+.ani-text {
+  margin-top: -60vh;
+  margin-bottom: 10vh;
+}
+
+.fredag-text {
+  margin-top: -60vh;
+  margin-bottom: 25vh;
+}
+
+.sad-text {
+  margin-top: -60vh;
+  margin-bottom: 10vh;
+}
+.basket-text {
+  margin-top: -57vh;
+  margin-bottom: 10vh;
+}
+.video-text.video-text-left p,
+.video-text.video-text-right p {
+  margin: 0.8rem 0;
+}

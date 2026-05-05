@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><img class="rest" src="Bilder/RestaurantLogo.png" alt="Restaurant Logo"></div>
+            <ul class="nav-links">
+                <li><a class="links" href="Index.html">Hjem</a></li>
+                <li><a class="links" href="meny.html">Meny</a></li>
+                <li><a class="links" href="Restauranter.html">Restauranter</a></li>
+                <li><a class="links" href="Omspiseri.html">Om spiseri</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="logginn">
+        <a href="logginn.html">Logg inn</a>
+    </div>
+
+    <h1 class="overtekst">Spiseri - gode smaker i hyggelige omgivelser.</h1>
+    <p class="undertekst">Vi serverer sesongbaserte retter laget fra bunnen av. Perfekt for både lunsj og middag i en avslappet atmosfære.</p>
+
+
+    <div class="resbes">
+    <a href="Reserver.html"><h1 class="Reserver">Reserver</h1></a>
+    <a href="Bestill.html"><h1 class="Bestill">Bestill</h1></a>
+
+    </div>
+
+
+    <footer class="footer">
+    <p class="footer-text">© 2024 Spiseri. Alle rettigheter reservert.</p>
+
+    <img src="Bilder/Instagram png.png" alt="Instagram Icon">
+    <img  src="Bilder/Facebook png.png" alt="Facebook Icon">
+    <img  src="Bilder/Tiktok png logo.png" alt="Tiktok Icon">
+
+</footer>
+
+
+    <script>
+        // Highlight current page in navbar
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.nav-links a');
+            const currentUrl = window.location.pathname;
+            
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                // Check if the href matches the current page
+                if (currentUrl.includes(href) || 
+                    (href === 'Index.html' && (currentUrl.endsWith('/') || currentUrl.includes('Index.html')))) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    <div class="container">
+</body>
+</html>

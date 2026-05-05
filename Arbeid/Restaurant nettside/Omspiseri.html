@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><img class="rest" src="Bilder/RestaurantLogo.png" alt="Restaurant Logo"></div>
+            <ul class="nav-links">
+                <li><a class="links" href="Index.html">Hjem</a></li>
+                <li><a class="links" href="meny.html">Meny</a></li>
+                <li><a class="links" href="Restauranter.html">Restauranter</a></li>
+                <li><a class="links" href="Omspiseri.html">Om spiseri</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="logginn">
+        <a href="logginn.html">Logg inn</a>
+    </div>
+
+
+    <h1 class="spoovertekst">Spiseri - Om oss</h1>
+        <div class="content-box">
+        <h2 class="Historie">Vår Historie</h2>
+        <p class="undertekst">Spiseri ble ikke skapt for å følge trender. Det ble skapt for å ta vare på noe viktig – den norske måten å samles rundt matbordet på.
+
+Ideen oppstod fra minner om lange middager hjemme; et kjøkken fullt av liv, lyden av stekepannen som freser, og samtaler som varer lenger enn selve måltidet. Vi så hvordan moderne hverdager ble travlere, hvordan ferdigløsninger tok over, og hvordan selve måltidet ofte ble noe man “bare skulle bli ferdig med”.
+
+Spiseri ble vår måte å bremse litt på. Å hente tilbake verdien av det å sitte sammen. Å spise ordentlig mat, laget med tid og omtanke.
+
+Navnet er bevisst enkelt. Et spiseri er ikke formelt. Det er ikke høytidelig. Det er et sted du går for å spise – og for å være sammen. Et sted som føles tilgjengelig, inkluderende og ekte.
+
+Vi bygger på tradisjonene om varme kjøkken, rause porsjoner og åpne dører. Samtidig har vi tatt med oss det moderne – nye smaker, nye impulser og en meny som passer dagens tempo, uten å miste det som betyr noe.</p>
+    </div>
+
+    <div class="content-box">
+        <h3>Arven vi bygger videre på</h3>
+        <p>I bunn ligger en respekt for håndverket. For råvarer som behandles riktig. For oppskrifter som har blitt justert gjennom generasjoner.
+
+Spiseri handler om å føre videre det viktige:
+
+Fellesskapet rundt bordet
+
+Gleden ved et godt måltid
+
+Tiden man setter av til hverandre
+
+Vi tror at mat ikke bare handler om smak – det handler om minner. Om lukter som tar deg tilbake. Om retter som samler folk igjen og igjen.</p>
+    </div>
+
+    <div class="content-box">
+        <h4>Vår matfilosofi</h4>
+        <p>Hos Spiseri lager vi mat slik den skal lages – fra bunnen av, med respekt for råvarene og med fokus på ekte smaker.
+
+Pizzaene våre har sprø bunn og rause toppinger. Burgerne er saftige og solide. Salatene er friske og balanserte. Grillrettene har den dype smaken som bare skikkelig varme kan gi.
+
+Det skal være enkelt å velge, og vanskelig å glemme.</p>
+    </div>
+
+    <div class="content-box">
+        <h5>Et sted for øyeblikkene</h5>
+        <p>Spiseri er laget for både hverdager og merkedager. For små pauser og lange kvelder. For barnefamilier, vennegjenger og stille middager for to.
+
+Her skal du kjenne at tempoet senkes litt. At praten flyter litt lettere. At maten smaker slik den skal.
+
+For det er nettopp det Spiseri bygger på, pappa – noe viktig:
+Verdien av å sitte sammen.</p>
+    </div>
+
+    <footer class="footer">
+    <p class="footer-text">© 2024 Spiseri. Alle rettigheter reservert.</p>
+
+    <img src="Bilder/Instagram png.png" alt="Instagram Icon">
+    <img  src="Bilder/Facebook png.png" alt="Facebook Icon">
+    <img  src="Bilder/Tiktok png logo.png" alt="Tiktok Icon">
+
+</footer>
+
+    <script>
+        // Highlight current page in navbar
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.nav-links a');
+            const currentUrl = window.location.pathname;
+            
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                // Check if the href matches the current page
+                if (currentUrl.includes(href) || 
+                    (href === 'Index.html' && (currentUrl.endsWith('/') || currentUrl.includes('Index.html')))) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    <div class="container"></div>
+</body>
+</html>
