@@ -1,19 +1,27 @@
 
+/* Style.css - Main stylesheet for the portfolio website */
+/* This file contains all the CSS styles for the website, including layout, colors, animations, and responsive design */
+
+/* Global font family for all elements */
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
+/* Debug outline - commented out for debugging layout */
 /* * {
   outline: 3px solid red; 
 } */
 
+/* Alternative outline for debugging */
 /* outline for alt*/
 
 /*------------------------hentet fra google---------------------------*/
 
+/* Import Google Fonts for Roboto and Space Mono */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
        
+/* Body styles - full height, no margin, radial gradient background */
 body {
     height: 100vh; /* Ensures the body takes full viewport height */
     margin: 0; /* Removes default body margin */
@@ -21,6 +29,7 @@ body {
 
 }
 
+/* CSS custom properties (variables) for navigation colors */
 :root {
   --nav-active-bg: hsl(272deg 68% 48%);
   --nav-hover-bg: color-mix(in srgb, var(--nav-active-bg) 75%, transparent 25%);
@@ -31,8 +40,7 @@ body {
 
 /*------------------------------------------------------------------------*/
 
-
-
+/* Commented out styles for unordered list text - no longer used */
 /* dette gjorde jeg når jegt hadde unordered list
 .text {
     border-radius: 13px;
@@ -47,6 +55,7 @@ body {
 
 
 /* ===== Noe av dette ble tatt fra Chatgpt. men mye gjort selv.==== */
+/* Header styles - top navigation bar with logo and menu */
 header {
     margin-top: 3vh;
     display: flex;
@@ -63,6 +72,7 @@ header {
     box-shadow: 0 0 2vh rgba(255, 255, 255, 0.349); 
 }
 
+/* Navigation menu positioning and layout */
 nav {
   position: absolute;
   left: 50%;
@@ -78,6 +88,7 @@ nav {
   padding: 0 2vh;
 }
 
+/* Logo styling and hover effects */
 .logo {
     height: 6vh;
     position: relative;
@@ -100,6 +111,7 @@ a[aria-label="Home"]:focus .logo,
 }
 
 
+/* Home link container styling */
 a[aria-label="Home"] {
   display: inline-flex;
   align-items: center;
@@ -114,6 +126,7 @@ a[aria-label="Home"]:focus {
   background-color: var(--nav-hover-bg);
   box-shadow: 0 0 1.2vh rgba(0,0,0,0.18);
 }
+/* Navigation text links styling */
 .navtext {
   margin: 0 1.5vh;
   color: white;
@@ -127,6 +140,8 @@ a[aria-label="Home"]:focus {
 }
 
 
+/* Active navigation link styling */
+/* Active navigation link styling */
 a.navtext.active,
 nav a[aria-current="page"] {
   background-color: var(--nav-active-bg); 
@@ -136,7 +151,7 @@ nav a[aria-current="page"] {
   transform: none;
 }
 
-
+/* Second navigation rule - duplicate positioning */
 nav {
   position: absolute;
   left: 50%;
@@ -159,6 +174,7 @@ nav a:hover {
 
 /* ============================= */
 
+/* General link styling */
 a {
     text-decoration: none;
     color: white;
@@ -174,6 +190,7 @@ a {
 /* -----taken from chatgpt------ */
 /* ============================= */
 
+/* Profile circle container with hover effects and animation */
 .circle {
     cursor: pointer;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -184,12 +201,13 @@ a {
     animation: heartbeat 2s infinite;
 }
 
-
+/* Circle hover scaling and glow effect */
 .circle:hover {
     transform: translate(-50%, -50%) scale(1.08);
     box-shadow: 0 0 4vh rgba(120, 170, 255, 0.75);
 }
 
+/* Heartbeat animation keyframes */
 @keyframes heartbeat {
     0%, 20%, 100% {
         transform: translate(-50%, -50%) scale(1);
@@ -205,7 +223,7 @@ a {
     }
 }
 
-
+/* Outer ring effect on circle hover */
 .circle::after {
     content: "";
     position: absolute;
@@ -220,7 +238,7 @@ a {
     opacity: 1;
 }
 
-
+/* Text inside circle, appears on hover */
 .circle-text {
     color: white;
     font-size: 3vh;
@@ -234,11 +252,12 @@ a {
     opacity: 1;
 }
 
-
+/* Focus styles for accessibility */
 a:focus .circle {
     box-shadow: 0 0 4vh rgba(120, 170, 255, 0.9);
 }
 
+/* Circle image styling */
 .circle-img {
     width: 100%;
     height: 100%;
@@ -248,7 +267,7 @@ a:focus .circle {
 
 /* ============================= */
 
-
+/* Real circle element - profile picture circle */
 .circlereal {
     width: 42.3728813559322vh;
     height: 42.3728813559322vh;
@@ -264,6 +283,7 @@ a:focus .circle {
     border: none;
 }
 
+/* About me text box overlay */
 .aboutme {
     position: absolute;
     top: 35%;           
@@ -277,14 +297,17 @@ a:focus .circle {
     box-shadow: 0 0 2vh rgba(0, 0, 0, 0.5); 
 }
 
+/* Header navigation link margins */
 header nav a {
     margin: 0 2vh;
 }
 
+/* Reset margin for all links */
 a {
     margin: 0;
 }
 
+/* Circle container dimensions and positioning */
 .circle {
     display: block;
     width: 42.3728813559322vh;
@@ -320,13 +343,14 @@ a {
     box-shadow: 0 0 1vh rgba(32, 3, 99, 0.5); 
 }
 
+/* Circle link wrapper */
 .circle-link {
     display: block;
     text-decoration: none;
     color: inherit;
 }
 
-
+/* Linus name styling */
 .linus {
     color: red;
     position: absolute;
@@ -338,7 +362,7 @@ a {
     width: 100vh;
 }
 
-
+/* Apps section title text */
 .appstext {
     font-size: 4.4213075060532687vh;
     color: white;
@@ -347,7 +371,7 @@ a {
     margin-left: 1.5vh;
 }
 
-
+/* Apps section subtitle text */
 .apptextunder {
     font-size: 1.1494252873563218vh;
     color: white;
@@ -356,11 +380,13 @@ a {
     justify-content: space-between;
     }
 
+/* App icon sizing */
 .app {
     height: 10vh;
     width: 10vh;
 }
 
+/* Programs container - flex layout for app icons */
 .programs {
     display: flex;
     flex-wrap: wrap;
@@ -369,6 +395,7 @@ a {
     
 }
 
+/* Skill category boxes - borders and padding */
 .picture-editing,
 .video-editing,
 .html_css {
@@ -381,6 +408,7 @@ a {
 
 
 
+/* Group link wrapper */
 .group-link {
     display: block;        
     text-decoration: none; 
@@ -390,6 +418,7 @@ a {
 
 }
 
+/* Navigation text - updated styles */
 .navtext {
   margin: 0;
   color: white;
@@ -402,21 +431,25 @@ a {
   white-space: nowrap;
   flex: none;
 }
-/* layout for the small headings under the apps section */
+
+/* Layout for app section heading underlines */
 .apptextunder {
   width: 57.47126436781609vh;
   font-size: 0.9195402298850575vh;
   margin-left: 32vw;
 }
 
+/* Picture Editing section positioning */
 .PE {
   margin-left: -3.45vw;
 }
 
+/* HTML/CSS section positioning */
 .HC {
   margin-right: -8.45vw;
 }
 
+/* Video section container */
 .film {
     width: 67vw;
     height: 70vh;
@@ -427,6 +460,7 @@ a {
     border-radius: 1.5325670498084292vh;
 }
 
+/* Video of the month section title */
 .vom {
     color: #9999ff;
     display: flex;
@@ -434,8 +468,7 @@ a {
     font-size: 6vh;    
 }
 
-
-
+/* Footer section styling */
 footer {
     height: 60vh;
     margin-top: 38.31417624521073vh;
@@ -443,6 +476,7 @@ footer {
     background-color: #030116;
 }
 
+/* Footer text container */
 .foottekst {
     padding-top: 10vh;
     color: white; 
@@ -451,6 +485,7 @@ footer {
     justify-content: space-evenly;
 }
 
+/* Footer social media links wrapper */
 .footwrap {
     display: flex;
     flex-direction: row;
@@ -460,13 +495,12 @@ footer {
     margin-top: 3vh;
 }
 
-
+/* Footer app/social media icon sizing */
 .footapp {
     height: 3.8314176245210727vh;
 }
 
-
-
+/* Large content box container */
 .big-boxy {
     width: 90%;
     height: 75vh;
@@ -478,8 +512,7 @@ footer {
     box-shadow: 0 0 2vh rgba(0, 0, 0, 0.5); 
 }
 
-
-
+/* Content text inside big-boxy section */
 .big-boxytext {
     padding-left: 85vh;
     padding-top: 0.5vh;
@@ -487,7 +520,7 @@ footer {
     z-index: 2;
 }
 
-
+/* Image filter techniques section */
 .ift {
     filter: invert(1);
     height: 6vh;
@@ -496,6 +529,7 @@ footer {
     flex-direction: row;
 }
 
+/* Big box details container */
 .bbd {
     margin-top: 20vh;
     padding-left: 87vh;
@@ -505,6 +539,7 @@ footer {
     justify-content: space-between;
 }
 
+/* Contact form styling */
 .contact-form {
   max-width: 22vw;
   height: 50vh;
@@ -519,16 +554,19 @@ footer {
   margin-top: -59.5vh;
 }
 
+/* Contact form field container */
 .contact-form div {
   margin-bottom: 1.1494252873563218vh;
 }
 
+/* Contact form labels */
 .contact-form label {
   display: block; 
   margin-bottom: 0.3831417624521073vh;
   font-weight: bold;
 }
 
+/* Input fields and textarea styling */
 .contact-form input,
 .contact-form textarea {
   width: 100%; 
@@ -543,6 +581,7 @@ footer {
   resize: vertical; 
 }
 
+/* Submit button styling */
 .contact-form button {
   margin-top: 1vh;
   background-color: #373347; 
@@ -558,10 +597,12 @@ footer {
   background-color: #080c13;
 }
 
+/* Kontakt section heading */
 .kontakt {
   margin-top: 6vh;
 }
 
+/* Message textarea sizing */
 #message {
     height: 20vh;
 }
@@ -574,16 +615,18 @@ footer {
     padding-right: 5vh;
 }
 
+/* Get section heading */
 .get {
     padding-left: 20vh;
     width: 30vh;
 }
 
+/* Hardware section heading */
 .hard {
     font-size: 1.5vh;
 }
 
-
+/* Contact/portfolio image styling */
 .picture {
     position: relative;
     height: 70vh;
@@ -595,7 +638,7 @@ footer {
     box-shadow: 0 0 2vh rgba(0, 0, 0, 0.726); 
 }
 
-
+/* Big boxy gradient background */
 .big-boxy {
   position: relative;
   background-color: #eee; 
@@ -603,6 +646,7 @@ footer {
 }
 
 
+/* Smaller overlay box inside big-boxy section */
 .smaller-boxy {
     width: 82.32445520581113vh; 
     height: 70.2179176755448vh;
@@ -618,11 +662,13 @@ footer {
 
 
 
+/* Z-index layering for overlapping elements */
 .get, .hard, .big-boxytext, .bais, .contact-form, .bbd, p {
     position: relative;
     z-index: 2;
 }
 
+/* Design manual iframe container */
 .desmanual{
   margin-left: 4vh;
   margin-top: 30vh;
@@ -634,7 +680,7 @@ footer {
   border: 0.12106537530266344vh solid rgba(0,0,0,0.08);
 }
 
-/* make iframe fill the container and remove default borders */
+/* Make iframe fill the container and remove default borders */
 .desmanual iframe{
   width: 100%;
   height: 100%;
@@ -642,6 +688,7 @@ footer {
   display: block;
 }
 
+/* Design manual text description */
 .Des-text {
   color: white;
   margin-left: 62vw;
@@ -650,6 +697,7 @@ footer {
 
 
 
+/* Figma prototype embed */
 .figma  {
   height: 70vh;
   width: 50vw;
@@ -669,6 +717,8 @@ footer {
   box-shadow: 0 0 4vh rgba(255, 255, 255, 0.356); 
 
 }
+
+/* Restaurant Section text */
 .RS_text {
   color: white;
   position: relative;
@@ -676,12 +726,14 @@ footer {
   margin-top: -47vh;
 }
 
+/* Restaurant Section text styling */
 .text-RS {
   font-size: 2.5vh;
 }
 
 
 
+/* Prototype section - flex layout for side-by-side content */
 .prototype-section {
   display: flex;
   width: 100vw;
@@ -696,6 +748,7 @@ footer {
   margin-left: 4vw;
 }
 
+/* Figma prototype embed sizing */
 .figma {
   width: 100%;
   height: 100%;
@@ -703,6 +756,7 @@ footer {
   display: block;
 }
 
+/* App prototype text and description */
 .prototype-app {
   color: white;
   width: 40vw;
@@ -711,6 +765,7 @@ footer {
 }
 
 
+/* Gallery/media container */
 .gata {
   height: 50vh;
   width: 80vw;
@@ -725,32 +780,44 @@ footer {
   margin-top: 30vh;
 }
 
+/* Left-aligned video container */
 .video-wrap.video-left {
   margin-left: 4vh;
   width: 50vw;
   height: 60vh;
 }
 
+/* Right-aligned video container */
 .video-wrap.video-right {
   margin-left: 43vw;
   width: 50vw;
   height: 60vh;
 }
+
+/* Friday video section spacing */
 .fredag-video {
   margin-top: 20vh;
 }
+
+/* Sad video section spacing */
 .sad-video {
   margin-top: 40vh;
 }
+
+/* Restaurant image showcase with hover effect */
 .restaurant-image,
 .video-wrap.video-left.restaurant-image {
   margin-top: 25vh;
   height: auto;
   transition: transform 0.25s ease;
 }
+
+/* Restaurant image hover scale effect */
 .restaurant-image:hover {
   transform: scale(1.02);
 }
+
+/* Video items inside restaurant image container */
 .restaurant-image .video-item {
   width: 100%;
   height: auto !important;
@@ -760,10 +827,12 @@ footer {
   margin: 0 auto;
 }
 
+/* Basket/shopping video section spacing */
 .basket-video {
   margin-top: 30vh;
 }
 
+/* Video media items - full height sizing */
 .video-item {
   width: 100%;
   height: 100%;
@@ -771,6 +840,7 @@ footer {
   display: block;
 }
 
+/* Video description text styling */
 .video-text {
   color: white;
   margin-top: -50vh;
@@ -781,41 +851,53 @@ footer {
   min-height: 25vh;
 }
 
+/* Right-aligned video text positioning */
 .video-text.video-text-right {
   margin-left: 55vw;
 }
 
+/* Left-aligned video text positioning */
 .video-text.video-text-left {
   margin-left: 4vh;
 }
 
+/* Norway project video text positioning */
 .norway-text {
   margin-top: -63vh;
   margin-bottom: 10vh;
 }
+
+/* Street/travel project text positioning */
 .street-text {
   margin-top: -60vh;
   margin-bottom: 10vh;
 }
 
+/* Animation project text positioning */
 .ani-text {
   margin-top: -60vh;
   margin-bottom: 10vh;
 }
 
+/* Friday project text positioning */
 .fredag-text {
   margin-top: -60vh;
   margin-bottom: 25vh;
 }
 
+/* Sad project text positioning */
 .sad-text {
   margin-top: -60vh;
   margin-bottom: 10vh;
 }
+
+/* Basket project text positioning */
 .basket-text {
   margin-top: -57vh;
   margin-bottom: 10vh;
 }
+
+/* Paragraph margins inside video text containers */
 .video-text.video-text-left p,
 .video-text.video-text-right p {
   margin: 0.8rem 0;
